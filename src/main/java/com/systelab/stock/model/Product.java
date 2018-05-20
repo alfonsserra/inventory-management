@@ -22,13 +22,13 @@ public class Product extends BaseEntity {
 
     @Id
     @GeneratedValue
-    private Long productID;
+    private Long id;
 
     @Size(max = 255)
     private String name;
 
     @Size(max = 255)
-    private String productReportDescription;
+    private String reportDescription;
 
     @Size(max = 16)
     private String code;
@@ -48,6 +48,8 @@ public class Product extends BaseEntity {
     @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER, optional = true)
     private Section section;
 
+    @Enumerated(EnumType.STRING)
+    private LabelPrintingMode labelPrintingMode;
 
     private Integer minimumExpiry;
     private Integer consumptionPurchaseRatio;
@@ -59,11 +61,11 @@ public class Product extends BaseEntity {
     private String purchaseUnits;
     private String consumptionUnits;
     private String defaultLocation;
-    private String labelPrintingMode;
+
     private Integer testsProductRatio;
     private boolean active;
     private Double pricePerUnit;
-    private Double vATPercentage;
+    private Double vatPercentage;
     private String comments;
     private String productBarcode;
     private String productHostCode;
