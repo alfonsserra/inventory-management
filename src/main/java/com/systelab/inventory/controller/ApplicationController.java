@@ -1,13 +1,13 @@
-package com.systelab.stock.controller;
+package com.systelab.inventory.controller;
 
-import com.systelab.stock.model.Product;
-import com.systelab.stock.model.ProductGroup;
-import com.systelab.stock.model.Supplier;
-import com.systelab.stock.model.Warehouse;
-import com.systelab.stock.repository.ProductGroupRepository;
-import com.systelab.stock.repository.ProductRepository;
-import com.systelab.stock.repository.SupplierRepository;
-import com.systelab.stock.repository.WarehouseRepository;
+import com.systelab.inventory.model.Product;
+import com.systelab.inventory.model.ProductGroup;
+import com.systelab.inventory.model.Supplier;
+import com.systelab.inventory.model.Warehouse;
+import com.systelab.inventory.repository.ProductGroupRepository;
+import com.systelab.inventory.repository.ProductRepository;
+import com.systelab.inventory.repository.SupplierRepository;
+import com.systelab.inventory.repository.WarehouseRepository;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;

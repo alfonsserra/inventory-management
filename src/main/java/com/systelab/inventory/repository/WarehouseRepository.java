@@ -1,6 +1,6 @@
-package com.systelab.stock.repository;
+package com.systelab.inventory.repository;
 
-import com.systelab.stock.model.Warehouse;
+import com.systelab.inventory.model.Warehouse;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.repository.query.Param;

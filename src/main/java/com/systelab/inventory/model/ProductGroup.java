@@ -1,4 +1,4 @@
-package com.systelab.stock.model;
+package com.systelab.inventory.model;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.AllArgsConstructor;
@@ -14,7 +14,7 @@ import javax.persistence.Id;
 @NoArgsConstructor
 @AllArgsConstructor
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class DocumentFormat extends BaseEntity {
+public class ProductGroup extends BaseEntity {
 
     @Id
     @GeneratedValue
@@ -22,5 +22,6 @@ public class DocumentFormat extends BaseEntity {
 
     private String name;
     private boolean active;
+    private String code;
 
 }

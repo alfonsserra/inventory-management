@@ -1,7 +1,7 @@
-package com.systelab.stock.repository;
+package com.systelab.inventory.repository;
 
-import com.systelab.stock.model.Product;
-import com.systelab.stock.model.ProductType;
+import com.systelab.inventory.model.Product;
+import com.systelab.inventory.model.ProductType;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.data.domain.Page;

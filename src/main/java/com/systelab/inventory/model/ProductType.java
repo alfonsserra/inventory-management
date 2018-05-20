@@ -1,4 +1,4 @@
-package com.systelab.stock.model;
+package com.systelab.inventory.model;
 
 public enum ProductType {
     R, C, Q, K, L, M, N;

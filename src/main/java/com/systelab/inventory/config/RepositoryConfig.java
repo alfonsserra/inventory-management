@@ -1,6 +1,6 @@
-package com.systelab.stock.config;
+package com.systelab.inventory.config;
 
-import com.systelab.stock.model.*;
+import com.systelab.inventory.model.*;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.rest.core.config.RepositoryRestConfiguration;
 import org.springframework.data.rest.webmvc.config.RepositoryRestConfigurerAdapter;

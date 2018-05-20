@@ -1,4 +1,4 @@
-package com.systelab.stock;
+package com.systelab.inventory;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -11,9 +11,9 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @EnableJpaAuditing
 @EnableSwagger2
 @Import({springfox.documentation.spring.data.rest.configuration.SpringDataRestConfiguration.class})
-public class StockApplication {
+public class InventoryManagementApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(StockApplication.class, args);
+        SpringApplication.run(InventoryManagementApplication.class, args);
     }
 }

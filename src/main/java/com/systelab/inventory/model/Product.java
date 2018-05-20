@@ -1,4 +1,4 @@
-package com.systelab.stock.model;
+package com.systelab.inventory.model;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.AllArgsConstructor;

@@ -1,4 +1,4 @@
-package com.systelab.stock.model;
+package com.systelab.inventory.model;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.AllArgsConstructor;
@@ -14,7 +14,7 @@ import javax.persistence.Id;
 @NoArgsConstructor
 @AllArgsConstructor
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class Section extends BaseEntity {
+public class DocumentFormat extends BaseEntity {
 
     @Id
     @GeneratedValue
@@ -22,9 +22,5 @@ public class Section extends BaseEntity {
 
     private String name;
     private boolean active;
-    private String externalID;
-    private String responsible;
-    private String code;
-    private String email;
 
 }

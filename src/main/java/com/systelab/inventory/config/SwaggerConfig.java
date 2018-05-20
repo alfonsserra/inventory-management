@@ -1,4 +1,4 @@
-package com.systelab.stock.config;
+package com.systelab.inventory.config;
 
 import com.google.common.base.Predicate;
 import com.google.common.collect.Lists;
@@ -53,7 +53,7 @@ public class SwaggerConfig {
     private ApiInfo metaData() {
         ApiInfo apiInfo = new ApiInfo(
                 "Seed application programming interface (API)",
-                "Restful API to manage the Seed Application to be used as an example.",
+                "Restful API to manage the Inventory Management Application.",
                 "V1.0",
                 "Terms of service",
                 new Contact("Alfons Serra", "https://github.com/alfonsserra/", "alfonsoserra@gmail.com"),

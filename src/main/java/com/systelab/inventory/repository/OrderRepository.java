@@ -1,6 +1,6 @@
-package com.systelab.stock.repository;
+package com.systelab.inventory.repository;
 
-import com.systelab.stock.model.Order;
+import com.systelab.inventory.model.Order;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
