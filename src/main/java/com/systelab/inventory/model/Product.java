@@ -15,11 +15,6 @@ import javax.validation.constraints.Size;
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class Product extends BaseEntity {
 
-    public static final String MODE_ONE_LABEL_PER_ENTRY = "E";
-    public static final String MODE_ONE_LABEL_PER_PURCHASE_UNIT = "P";
-    public static final String MODE_ONE_LABEL_PER_CONSUMPTION_UNIT = "C";
-
-
     @Id
     @GeneratedValue
     private Long id;
