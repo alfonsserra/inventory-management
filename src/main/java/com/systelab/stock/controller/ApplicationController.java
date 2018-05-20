@@ -69,7 +69,7 @@ public class ApplicationController {
 
         Product product1 = new Product();
         product1.setName("MacBook Pro");
-        product1.setProductReportDescription("MacBook Pro");
+        product1.setReportDescription("MacBook Pro");
         product1.setCode("435242342");
         product1.setSupplierProductCode("345323423432");
         product1.setSupplier(apple);
