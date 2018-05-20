@@ -1,0 +1,1 @@
+Check http://www.baeldung.com/jackson-annotations for JSON annotations
