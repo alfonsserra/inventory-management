@@ -10,7 +10,6 @@ import org.springframework.data.rest.core.annotation.RestResource;
 import java.util.List;
 
 
-@RepositoryRestResource(collectionResourceRel = "warehouses", path = "warehouses")
 public interface WarehouseRepository extends JpaRepository<Warehouse, Long> {
     List findByName(@Param("name") String name);
 

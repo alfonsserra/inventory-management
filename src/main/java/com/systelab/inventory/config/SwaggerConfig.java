@@ -43,7 +43,7 @@ public class SwaggerConfig {
                 regex("/warehouses.*"),
                 regex("/orders.*"),
                 regex("/supplier.*"),
-                regex("/productgroups.*"),
+                regex("/productGroups.*"),
                 regex("/products.*"));
     }
 
