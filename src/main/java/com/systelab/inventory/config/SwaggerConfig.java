@@ -33,6 +33,7 @@ public class SwaggerConfig {
                         new Tag("Application Entity", "Global Management API"),
                         new Tag("Supplier Entity", "Supplier Management API"),
                         new Tag("Warehouse Entity", "Warehouse Management API"),
+                        new Tag("Item Entity", "Item Management API"),
                         new Tag("Order Entity", "Order Management API"))
                 .securitySchemes(Lists.newArrayList(apiKey()));
     }
@@ -42,6 +43,7 @@ public class SwaggerConfig {
                 regex("/application.*"),
                 regex("/warehouses.*"),
                 regex("/orders.*"),
+                regex("/items.*"),
                 regex("/supplier.*"),
                 regex("/productGroups.*"),
                 regex("/products.*"));
