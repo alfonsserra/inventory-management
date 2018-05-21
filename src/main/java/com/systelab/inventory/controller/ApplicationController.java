@@ -36,7 +36,7 @@ public class ApplicationController {
     @Autowired
     private ProductRepository productRepository;
 
-    @ApiOperation(value = "Init some data", notes = "")
+    @ApiOperation(value = "Init some data", notes = "Initialize the DB with basic information in order to test the API.")
     @PostMapping("init")
     public boolean initSomeData() {
         Warehouse warehouse1 = new Warehouse();
