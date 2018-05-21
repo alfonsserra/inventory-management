@@ -1,5 +1,6 @@
 package com.systelab.inventory.model;
 
+import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -25,9 +26,15 @@ public class Order extends BaseEntity {
     private Warehouse warehouse;
 
     private String description;
+
+    @ApiModelProperty(value = "Account Number in this system")
     private String internalAccountNumber;
+    @ApiModelProperty(value = "Account Number in an external system")
     private String externalAccountNumber;
-    private String status;
+
+    @Enumerated(EnumType.STRING)
+    private OrderStatus status;
+
     private String internalComments;
     private String externalComments;
     private Date lastPrintDate;

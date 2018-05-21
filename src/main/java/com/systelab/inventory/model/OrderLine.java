@@ -22,7 +22,7 @@ public class OrderLine extends BaseEntity {
     private Product product;
 
     @Enumerated(EnumType.STRING)
-    private OrderStatus status;
+    private OrderReceptionStatus status;
 
     private Integer requestedQuantity;
     private Integer receivedQuantity;
