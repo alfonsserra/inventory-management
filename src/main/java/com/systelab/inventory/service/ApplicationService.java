@@ -8,6 +8,8 @@ import com.systelab.inventory.repository.ProductGroupRepository;
 import com.systelab.inventory.repository.ProductRepository;
 import com.systelab.inventory.repository.SupplierRepository;
 import com.systelab.inventory.repository.WarehouseRepository;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -15,6 +17,9 @@ import org.springframework.transaction.annotation.Transactional;
 @Service
 @Transactional
 public class ApplicationService {
+
+    private final Logger log = LoggerFactory.getLogger(ApplicationService.class);
+
 
     @Autowired
     private WarehouseRepository warehouseRepository;
@@ -29,6 +34,8 @@ public class ApplicationService {
     private ProductRepository productRepository;
 
     public boolean initSomeData() {
+        log.debug("Initializing Data Base");
+
         Warehouse warehouse1 = new Warehouse();
         warehouse1.setName("Rotterdam");
         warehouseRepository.save(warehouse1);
