@@ -30,6 +30,7 @@ public class SwaggerConfig {
                 .apiInfo(metaData())
                 .tags(new Tag("Product Entity", "Product Management API"),
                         new Tag("ProductGroup Entity", "Product Group Management API"),
+                        new Tag("Application Entity", "Global Management API"),
                         new Tag("Supplier Entity", "Supplier Management API"),
                         new Tag("Warehouse Entity", "Warehouse Management API"),
                         new Tag("Order Entity", "Order Management API"))
@@ -52,7 +53,7 @@ public class SwaggerConfig {
 
     private ApiInfo metaData() {
         ApiInfo apiInfo = new ApiInfo(
-                "Seed application programming interface (API)",
+                "Inventory Management API",
                 "Restful API to manage the Inventory Management Application.",
                 "V1.0",
                 "Terms of service",
