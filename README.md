@@ -1,4 +1,4 @@
-# `inventory-management` — Inventory Management projects
+# Inventory Management
 
 This project is an application skeleton for a Inventory Management application.
 
