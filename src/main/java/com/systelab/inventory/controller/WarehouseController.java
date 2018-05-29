@@ -19,7 +19,7 @@ import java.util.List;
 @Api(tags = {"Warehouse Entity"})
 @RestController()
 @CrossOrigin()
-@RequestMapping(value = "/warehouses", produces = MediaType.APPLICATION_JSON_VALUE)
+@RequestMapping(value = "api/warehouses", produces = MediaType.APPLICATION_JSON_VALUE)
 public class WarehouseController {
 
     @Autowired

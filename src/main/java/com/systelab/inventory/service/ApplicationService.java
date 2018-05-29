@@ -1,13 +1,7 @@
 package com.systelab.inventory.service;
 
-import com.systelab.inventory.model.Product;
-import com.systelab.inventory.model.ProductGroup;
-import com.systelab.inventory.model.Supplier;
-import com.systelab.inventory.model.Warehouse;
-import com.systelab.inventory.repository.ProductGroupRepository;
-import com.systelab.inventory.repository.ProductRepository;
-import com.systelab.inventory.repository.SupplierRepository;
-import com.systelab.inventory.repository.WarehouseRepository;
+import com.systelab.inventory.model.*;
+import com.systelab.inventory.repository.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,8 +27,19 @@ public class ApplicationService {
     @Autowired
     private ProductRepository productRepository;
 
+    @Autowired
+    private UserRepository userRepository;
+
     public boolean initSomeData() {
         log.debug("Initializing Data Base");
+
+        User user1= new User();
+        user1.setUsername("user");
+        // non-encrypted password: jwtpass
+        user1.setPassword("821f498d827d4edad2ed0960408a98edceb661d9f34287ceda2962417881231a");
+        user1.setFirstName("Alfons");
+        user1.setLastName("Serra");
+        userRepository.save(user1);
 
         Warehouse warehouse1 = new Warehouse();
         warehouse1.setName("Rotterdam");

@@ -40,13 +40,14 @@ public class SwaggerConfig {
 
     private Predicate<String> paths() {
         return or(
-                regex("/application.*"),
-                regex("/warehouses.*"),
-                regex("/orders.*"),
-                regex("/items.*"),
-                regex("/supplier.*"),
-                regex("/productGroups.*"),
-                regex("/products.*"));
+                regex("/api/application.*"),
+                regex("/api/warehouses.*"),
+                regex("/api/orders.*"),
+                regex("/api/items.*"),
+                regex("/api/users.*"),
+                regex("/api/supplier.*"),
+                regex("/api/productGroups.*"),
+                regex("/api/products.*"));
     }
 
     private ApiKey apiKey() {

@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 @Api(tags = {"Application Entity"})
 @RestController()
 @CrossOrigin()
-@RequestMapping(value = "application", produces = MediaType.APPLICATION_JSON_VALUE)
+@RequestMapping(value = "api/application", produces = MediaType.APPLICATION_JSON_VALUE)
 public class ApplicationController {
 
     @Autowired
