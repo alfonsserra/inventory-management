@@ -8,6 +8,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Service
 @Transactional
 public class ApplicationService {
@@ -30,16 +33,11 @@ public class ApplicationService {
     @Autowired
     private UserRepository userRepository;
 
+    @Autowired
+    private RoleRepository roleRepository;
+
     public boolean initSomeData() {
         log.debug("Initializing Data Base");
-
-        User user1= new User();
-        user1.setUsername("user");
-        // non-encrypted password: jwtpass
-        user1.setPassword("821f498d827d4edad2ed0960408a98edceb661d9f34287ceda2962417881231a");
-        user1.setFirstName("Alfons");
-        user1.setLastName("Serra");
-        userRepository.save(user1);
 
         Warehouse warehouse1 = new Warehouse();
         warehouse1.setName("Rotterdam");
