@@ -30,12 +30,6 @@ public class ApplicationService {
     @Autowired
     private ProductRepository productRepository;
 
-    @Autowired
-    private UserRepository userRepository;
-
-    @Autowired
-    private RoleRepository roleRepository;
-
     public boolean initSomeData() {
         log.debug("Initializing Data Base");
 
