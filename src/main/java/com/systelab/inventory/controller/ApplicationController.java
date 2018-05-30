@@ -3,6 +3,7 @@ package com.systelab.inventory.controller;
 import com.systelab.inventory.service.ApplicationService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.Authorization;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -20,7 +21,7 @@ public class ApplicationController {
     @Autowired
     private ApplicationService applicationService;
 
-    @ApiOperation(value = "Init some data", notes = "Initialize the DB with basic information in order to test the API.")
+    @ApiOperation(value = "Init some data", notes = "Initialize the DB with basic information in order to test the API.", authorizations = {@Authorization(value = "Bearer")})
     @PostMapping("init")
     public boolean initSomeData() {
         return applicationService.initSomeData();

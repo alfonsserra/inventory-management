@@ -1,5 +1,6 @@
 package com.systelab.inventory.config;
 
+import com.systelab.inventory.service.AppUserDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
@@ -34,7 +35,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     private String securityRealm;
 
     @Autowired
-    private UserDetailsService userDetailsService;
+    private AppUserDetailsService userDetailsService;
 
     @Bean
     @Override
