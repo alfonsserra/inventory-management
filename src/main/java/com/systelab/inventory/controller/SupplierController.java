@@ -22,6 +22,7 @@ import java.net.URI;
 @CrossOrigin()
 @RestController
 @RequestMapping("/api/suppliers")
+@PreAuthorize("hasRole('USER')")
 public class SupplierController {
 
     @Autowired
@@ -34,14 +35,12 @@ public class SupplierController {
                 .build();
     }
 
-    @PreAuthorize("hasRole('USER_ROLE')")
     @ApiOperation(value = "Get all the suppliers", authorizations = {@Authorization(value = "Bearer")})
     @GetMapping
     ResponseEntity<Page<Supplier>> findAllSupplier(Pageable pageable) {
         return ResponseEntity.ok(this.supplierRepository.findAll(pageable));
     }
 
-    @PreAuthorize("hasRole('ADMIN_ROLE')")
     @ApiOperation(value = "Get one supplier", authorizations = {@Authorization(value = "Bearer")})
     @GetMapping(value = "/{id}")
     ResponseEntity<Supplier> findOneSupplier(@PathVariable Long id) {
@@ -58,6 +57,7 @@ public class SupplierController {
         return ResponseEntity.created(uri).body(supplier);
     }
 
+    @PreAuthorize("hasRole('ADMIN')")
     @ApiOperation(value = "Delete a supplier", authorizations = {@Authorization(value = "Bearer")})
     @DeleteMapping(value = "/{id}")
     ResponseEntity<?> deleteSupplier(@PathVariable Long id) {

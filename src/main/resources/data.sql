@@ -1,5 +1,5 @@
-INSERT INTO app_role (id, role_name, description) VALUES (1, 'USER_ROLE', 'Standard User - Has no admin rights');
-INSERT INTO app_role (id, role_name, description) VALUES (2, 'ADMIN_ROLE', 'Admin User - Has permission to perform admin tasks');
+INSERT INTO app_role (id, role_name, description) VALUES (1, 'ROLE_USER', 'Standard User - Has no admin rights');
+INSERT INTO app_role (id, role_name, description) VALUES (2, 'ROLE_ADMIN', 'Admin User - Has permission to perform admin tasks');
 
 -- USER
 -- non-encrypted password: jwtpass

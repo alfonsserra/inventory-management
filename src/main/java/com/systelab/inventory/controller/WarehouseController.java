@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.MediaType;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,6 +21,7 @@ import java.util.List;
 @RestController()
 @CrossOrigin()
 @RequestMapping(value = "api/warehouses", produces = MediaType.APPLICATION_JSON_VALUE)
+@PreAuthorize("hasRole('USER')")
 public class WarehouseController {
 
     @Autowired
