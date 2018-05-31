@@ -39,6 +39,10 @@ public class SwaggerConfig {
                 .securitySchemes(Lists.newArrayList(apiKey()));
     }
 
+    private ApiKey apiKey() {
+        return new ApiKey("Bearer", "Authorization", "header");
+    }
+
     private Predicate<String> paths() {
         return or(
                 regex("/api/application.*"),
@@ -49,10 +53,6 @@ public class SwaggerConfig {
                 regex("/api/supplier.*"),
                 regex("/api/productGroups.*"),
                 regex("/api/products.*"));
-    }
-
-    private ApiKey apiKey() {
-        return new ApiKey("Bearer", "Authorization", "header");
     }
 
     private ApiInfo metaData() {
@@ -82,7 +82,6 @@ public class SwaggerConfig {
                 .operationsSorter(OperationsSorter.ALPHA)
                 .showExtensions(false)
                 .tagsSorter(TagsSorter.ALPHA)
-                .supportedSubmitMethods(UiConfiguration.Constants.DEFAULT_SUBMIT_METHODS)
                 .validatorUrl(null)
                 .build();
     }

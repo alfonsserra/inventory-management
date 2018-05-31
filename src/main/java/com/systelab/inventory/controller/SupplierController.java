@@ -22,7 +22,7 @@ import java.net.URI;
 @CrossOrigin()
 @RestController
 @RequestMapping("/api/suppliers")
-@PreAuthorize("hasRole('USER')")
+@PreAuthorize("hasAuthority('USER')")
 public class SupplierController {
 
     @Autowired
@@ -57,7 +57,7 @@ public class SupplierController {
         return ResponseEntity.created(uri).body(supplier);
     }
 
-    @PreAuthorize("hasRole('ADMIN')")
+    @PreAuthorize("hasAuthority('ADMIN')")
     @ApiOperation(value = "Delete a supplier", authorizations = {@Authorization(value = "Bearer")})
     @DeleteMapping(value = "/{id}")
     ResponseEntity<?> deleteSupplier(@PathVariable Long id) {

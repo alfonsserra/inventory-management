@@ -18,10 +18,6 @@ public interface WarehouseRepository extends JpaRepository<Warehouse, Long> {
 
     @Override
     @RestResource(exported = false)
-    void delete(Long id);
-
-    @Override
-    @RestResource(exported = false)
     void delete(Warehouse entity);
 
 }

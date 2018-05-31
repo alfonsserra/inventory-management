@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController()
 @CrossOrigin()
 @RequestMapping(value = "api/application", produces = MediaType.APPLICATION_JSON_VALUE)
-@PreAuthorize("hasRole('ADMIN')")
+@PreAuthorize("hasAuthority('ADMIN')")
 public class ApplicationController {
 
     @Autowired

@@ -21,7 +21,7 @@ import java.util.List;
 @RestController()
 @CrossOrigin()
 @RequestMapping(value = "api/warehouses", produces = MediaType.APPLICATION_JSON_VALUE)
-@PreAuthorize("hasRole('USER')")
+@PreAuthorize("hasAuthority('USER')")
 public class WarehouseController {
 
     @Autowired
