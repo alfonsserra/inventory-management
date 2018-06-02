@@ -19,7 +19,7 @@ import java.util.List;
 
 @Api(tags = {"Warehouse Entity"})
 @RestController()
-@CrossOrigin()
+@CrossOrigin(origins = "*", allowedHeaders="*", exposedHeaders = "Authorization", allowCredentials = "true")
 @RequestMapping(value = "api/warehouses", produces = MediaType.APPLICATION_JSON_VALUE)
 @PreAuthorize("hasAuthority('USER')")
 public class WarehouseController {

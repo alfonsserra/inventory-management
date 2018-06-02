@@ -19,7 +19,7 @@ import javax.annotation.security.PermitAll;
 
 @Api(tags = {"User Entity"})
 @RestController
-@CrossOrigin()
+@CrossOrigin(origins = "*", allowedHeaders="*", exposedHeaders = "Authorization", allowCredentials = "true")
 @RequestMapping(value = "/api/users", produces = MediaType.APPLICATION_JSON_VALUE)
 public class UserController {
 

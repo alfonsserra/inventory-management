@@ -19,7 +19,7 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import java.net.URI;
 
 @Api(tags = {"Supplier Entity"})
-@CrossOrigin()
+@CrossOrigin(origins = "*", allowedHeaders="*", exposedHeaders = "Authorization", allowCredentials = "true")
 @RestController
 @RequestMapping("/api/suppliers")
 @PreAuthorize("hasAuthority('USER')")
