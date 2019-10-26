@@ -34,7 +34,7 @@ mvn clean install
 To launch the server, simply run with java -jar the generated jar file.
 
 ```bash
-java -jar inventory-management-1.0.jar
+java -jar target/inventory-management-1.0.jar
 ```
 
 ## API
